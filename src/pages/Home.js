@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import "firebase/database";
-import { Container, Col, Row } from "react-bootstrap";
 import { DB_CONFIG } from "../config/config";
-import NavBar from "../components/Nav/NavBar";
 import Header from "./Header";
-import Cards from "../components/card/Container";
-import Adds from "../components/Text/Container";
+import Footer from "./Footer";
+import Main from "./Main";
 class App extends Component {
   state = {
     boxes: [],
@@ -15,7 +13,9 @@ class App extends Component {
   };
   componentDidMount() {
     this.editState = false;
-    this.app = firebase.initializeApp(DB_CONFIG);
+    this.app = !firebase.apps.length
+      ? firebase.initializeApp(DB_CONFIG)
+      : firebase.app();
     this.db = this.app
       .database()
       .ref()
@@ -91,7 +91,7 @@ class App extends Component {
     // logic
   }
   render() {
-    const { mainCard } = this.state;
+    const { mainCard, boxes } = this.state;
     return (
       <div className="App">
         <Header
@@ -103,56 +103,8 @@ class App extends Component {
           votesDown={mainCard.votesDown}
           votesUp={mainCard.votesUp}
         />
-        <main>
-          <Container fluid={true}>
-            <Row className="d-flex justify-content-center align-items-center">
-              <Col>
-                <Adds
-                  composedText={["Speak out. Be Heard.", "Be counted"]}
-                  contentText="rule of thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analyze and put the data in a public report"
-                />
-              </Col>
-              <h1 className="content-title">Votes</h1>
-              <Col lg={11}>
-                <Cards data={this.state.boxes} />
-              </Col>
-            </Row>
-          </Container>
-        </main>
-        <footer>
-          <section
-            className="contact"
-            style={{
-              backgroundImage: `url(${process.env.PUBLIC_URL +
-                `/assets/people.jpg`})`
-            }}
-          >
-            <div className="left">
-              <span>Is there anyone else you would want us to add?</span>
-            </div>
-            <div className="rigth">
-              <div className="submit-btn">
-                <span>Submit a Name</span>
-              </div>
-            </div>
-          </section>
-          <section className="credits">
-            <ul className="breadcrumbs-footer">
-              <li>Terms and Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Contact Us</li>
-            </ul>
-            <ul className="breadcrumbs-social">
-              <li>Follow Us</li>
-              <li>
-                <img src={process.env.PUBLIC_URL + "/assets/fb.png"} />
-              </li>
-              <li>
-                <img src={process.env.PUBLIC_URL + "/assets/tw.png"} />
-              </li>
-            </ul>
-          </section>
-        </footer>
+        <Main boxes={boxes} />
+        <Footer />
       </div>
     );
   }

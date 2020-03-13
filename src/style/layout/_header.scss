@@ -1,70 +1,70 @@
-.header{
-    width: 100%;
-    background-size: cover;
-    height: 740px;
+.header {
+  width: 100%;
+  background-size: cover;
+  height: 740px;
 
-    @import 'layout/_navbar.scss';
+  @import "layout/_navbar.scss";
 }
 
-.main-card{
-    @include card-background(1);
-    position: relative;
+.main-card {
+  @include card-background(1);
+  position: relative;
 }
 
 .closing {
-    width: 100%;
-    height: 50px;
-    background-color: $transparent;
+  width: 100%;
+  height: 50px;
+  background-color: $transparent;
+  bottom: -114px;
+  .closing-text {
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding: 15px;
+    color: $white;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+  .arrow_box {
+    position: relative;
+  }
+  .arrow_box:after,
+  .arrow_box:before {
+    left: 100%;
+    top: 50%;
+    border: solid $transparent;
+    content: " ";
+    height: 0;
+    width: 0;
     position: absolute;
-    bottom: -114px;
-    .closing-text {
-        float:left;
-        width: 30%;
-        text-align: right;
-        padding: 15px;
-        color: $white;
-        font-size: 13px;
-        line-height: 21px;
-        font-weight: 400;
-    }
-    .arrow_box {
-        position: relative;
-    }
-    .arrow_box:after, .arrow_box:before {
-        left: 100%;
-        top: 50%;
-        border: solid $transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-    }
-    
-    .arrow_box:after {
-        border-color: rgba(0, 0, 0, 0);
-        border-left-color: $transparent;
-        border-width: 9px;
-        margin-top: -9px;
-        margin-left: 15px;
-    }
-    .arrow_box:before {
-        border-color: rgba(0, 0, 0, 0);
-        border-left-color: $transparent;
-        border-width: 9px;
-        margin-top: -9px;
-        margin-left: 15px;
-    }
-    .closing-days {
-        float: right;
-        width: 70%;
-        height: 55px;
-        text-align: left;
-        padding: 0px 15px;
-        color: $grey-dark;
-        font-size: 37px;
-        line-height: 50px;
-        font-weight: 400;
-        background-color: rgba(255,255,255,0.7019607843137254);
-    }
+    pointer-events: none;
+  }
+
+  .arrow_box:after {
+    border-color: rgba(0, 0, 0, 0);
+    border-left-color: $transparent;
+    border-width: 9px;
+    margin-top: -9px;
+    margin-left: 15px;
+  }
+  .arrow_box:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-left-color: $transparent;
+    border-width: 9px;
+    margin-top: -9px;
+    margin-left: 15px;
+  }
+  .closing-days {
+    float: right;
+    width: 70%;
+    height: 55px;
+    text-align: left;
+    padding: 0px 15px;
+    color: $grey-dark;
+    font-size: 37px;
+    line-height: 50px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.7019607843137254);
+  }
 }

@@ -1,85 +1,92 @@
-footer{
-    margin-left: 165px;
-    margin-top: 40px;
-    .contact{
-        width: 86%;
-        height: 80px;
-        margin-bottom: 70px;
-        .left {
-            float: left;
-            span{
-                font-size: 30px;
-                line-height: 24px;
-                color: $base-color-dialog-box-text;
-                font-weight: 300;
-                text-align: center;
-            }
-        }
-        .rigth {
-            float: right;
-            .submit-btn{
-                width: 210px;
-                height: 53px;
-                background-color: rgba(255,255,255,0.14901960784313725);
-                border: 3px solid $base-color-dialog-box-text;
-                span{
-                    font-size: 20px;
-                    line-height: 24px;
-                    color: $base-color-dialog-box-text;
-                    font-weight: 400;
-                    text-align: center;
-                }
-            }
-        }
-    }
-    .credits {
-        margin-bottom: 30px;
-        width: 89%;
-        height: 50px;
-        .breadcrumbs-footer {
-            margin-top: -10px;
-            margin-left: -40px;
-            float: left;
-            li{
-                font-size: 16px;
-                line-height: 19px;
-                color: $base-color-dialog-box-text;
-                font-weight: 300;
-                float:left;
-                list-style: none;
-                margin-right: 50px;
-                cursor: pointer;
-                input {
-                    background: transparent no-repeat;
-                    background-size: contain;
-                    border-style: none;
-                    width: 100px;
-                    margin: -15px 30px 0px 0px;
-                }
-            }
-        }
+footer {
+  margin-left: 165px;
+  margin-top: 40px;
+  .contact {
+    width: 84%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
 
-        .breadcrumbs-social {
-            margin-top: -10px;
-            margin-left: -40px;
-            float: right;
-            li{
-                font-size: 16px;
-                line-height: 19px;
-                color: $base-color-dialog-box-text;
-                font-weight: 300;
-                float:left;
-                list-style: none;
-                margin-right: 30px;
-                cursor: pointer;
-                input {
-                    background: transparent no-repeat;
-                    background-size: contain;
-                    border-style: none;
-                    width: 100px;
-                    margin: -15px 30px 0px 0px;
-                }
-            }
-        }
+    .left {
+      color: white;
+      span {
+        font-size: 30px;
+        line-height: 24px;
+        color: $base-color-dialog-box-text;
+        font-weight: 300;
+        text-align: center;
+      }
     }
+    .rigth {
+      .submit-btn {
+        width: 210px;
+        height: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.14901960784313725);
+        border: 3px solid $base-color-dialog-box-text;
+        span {
+          font-size: 20px;
+          line-height: 24px;
+          color: $base-color-dialog-box-text;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .credits {
+    margin-bottom: 30px;
+    width: 89%;
+    height: 50px;
+    .breadcrumbs-footer {
+      margin-top: -10px;
+      margin-left: -40px;
+      float: left;
+      li {
+        font-size: 16px;
+        line-height: 19px;
+        color: $base-color-dialog-box-text;
+        font-weight: 300;
+        float: left;
+        list-style: none;
+        margin-right: 50px;
+        cursor: pointer;
+        input {
+          background: transparent no-repeat;
+          background-size: contain;
+          border-style: none;
+          width: 100px;
+          margin: -15px 30px 0px 0px;
+        }
+      }
+    }
+
+    .breadcrumbs-social {
+      margin-top: -10px;
+      margin-left: -40px;
+      float: right;
+      li {
+        font-size: 16px;
+        line-height: 19px;
+        color: $base-color-dialog-box-text;
+        font-weight: 300;
+        float: left;
+        list-style: none;
+        margin-right: 30px;
+        cursor: pointer;
+        input {
+          background: transparent no-repeat;
+          background-size: contain;
+          border-style: none;
+          width: 100px;
+          margin: -15px 30px 0px 0px;
+        }
+      }
+    }
+  }
 }

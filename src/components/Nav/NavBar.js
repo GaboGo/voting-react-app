@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Col, Row } from "react-bootstrap";
 const NavBar = () => {
   return (
     <nav
       className="navbar"
+      style={{
+        position: useLocation().pathname === "/home" ? "absolute" : "relative"
+      }}
     >
-      <Link to="/home" className="text-white">
-        Rule of Thumb.
-      </Link>
-      <ul className="breadcrumbs">
+      <Col>
+        <Link to="/home" className="text-white">
+          Rule of Thumb.
+        </Link>
+      </Col>
+      <Col lg={6} className="breadcrumbs">
         <li>
           <Link to="/past/trial">Past Trials</Link>
         </li>
@@ -25,7 +31,7 @@ const NavBar = () => {
             }}
           ></input>
         </li>
-      </ul>
+      </Col>
     </nav>
   );
 };

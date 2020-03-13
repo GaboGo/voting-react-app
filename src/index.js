@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./style/global.scss";
 import App from "./pages/Home";
 import NavBar from "./components/Nav/NavBar";
-import { Container } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import * as serviceWorker from "./serviceWorker";
 import {
   BrowserRouter as Router,
@@ -21,10 +21,22 @@ ReactDOM.render(
         <App />
       </Route>
       <Route exact path="/past/trial">
-        <h1>Past Trial</h1>
+        <Container className="d-flex justify-content-center align-items-center">
+          <Row>
+            <Col>
+              <h1>Hello world</h1>
+            </Col>
+          </Row>
+        </Container>
       </Route>
       <Route exact path="/information/works">
-        <h1>Information</h1>
+        <Container className="d-flex justify-content-center align-items-center">
+          <Row>
+            <Col>
+              <h1>Hello world</h1>
+            </Col>
+          </Row>
+        </Container>
       </Route>
       <Redirect to="/home" />
     </Switch>
