@@ -1,0 +1,31 @@
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+
+@import "vendor/_normalize.scss";
+
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+@import "base/_placeholders.scss";
+
+/* FRAMEWORK - Structure and layout files.
+========================================================================== */
+@import "layout/navbar.scss";
+@import "layout/_cards.scss";
+@import "layout/_header.scss";
+@import "layout/_boxText.scss";
+@import "layout/_footer.scss";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: $font-primary;
+}

@@ -1,0 +1,26 @@
+.card-text-container {
+  max-width: 75%;
+}
+.close-icon {
+  cursor: pointer;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    transition: all 0.4s;
+  }
+}
+.composed-text {
+  text-align: end;
+
+  > div:nth-child(1) > h1 {
+    font-weight: 400;
+    font-size: 2.9vh;
+    margin: 0px;
+  }
+}
+.content-text {
+  > h1 {
+    font-weight: 100;
+    font-size: 3vh;
+  }
+}
