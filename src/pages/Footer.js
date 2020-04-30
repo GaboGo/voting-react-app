@@ -9,6 +9,7 @@ const Footer = () => {
             `/assets/people.jpg`})`
         }}
       >
+        <div className="white-screen"></div>
         <div className="left">
           <span>Is there anyone else you would want us to add?</span>
         </div>

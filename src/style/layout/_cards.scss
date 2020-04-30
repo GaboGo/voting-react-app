@@ -97,14 +97,18 @@
 .vote-button {
   border: 1px solid $base-color-background;
   font-size: 1.8vh;
-  margin-left: 35px;
+  margin-left: 13px;
   max-width: 99.17px !important;
   min-width: 99.17px !important;
   color: $base-color-background;
+  height: 30px;
   cursor: pointer;
   > span {
     min-width: 50.17px !important;
     text-align: center;
+    &.hidden {
+      display: none !important;
+    }
   }
 }
 .content-title{

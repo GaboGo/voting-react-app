@@ -14,7 +14,7 @@ const NavBar = () => {
           Rule of Thumb.
         </Link>
       </Col>
-      <Col lg={6} className="breadcrumbs">
+      <Col lg={7} className="breadcrumbs">
         <li>
           <Link to="/past/trial">Past Trials</Link>
         </li>

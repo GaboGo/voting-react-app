@@ -1,11 +1,20 @@
 $font-primary: "Lato", sans-serif;
 
+$breakpoint-phone: 640px;
+$breakpoint-tablet: 768px; 
+$breakpoint-desktop: 1024px;
+
+$media-expression-desktop: "screen";
+$media-expression-phone: "handheld";
+$media-expression-print: "print";
+$media-expression-retina: "(-webkit-min-device-pixel-ratio: 2)";
+
 $orange: #ffad1d;
 $grey-dark: #464646;
 $grey: #ebebeb;
 $blue: #1cbbb4;
 $white: #ffffff;
-$black: #ffffff;
+$black: #000000;
 $transparent: rgba(112, 112, 112, 0.30196078431372547);
 $white-transparent: rgba(255, 255, 255, 0.7019607843137254);
 $main-card-blue: rgba(28, 187, 180, 0.9019607843137255);

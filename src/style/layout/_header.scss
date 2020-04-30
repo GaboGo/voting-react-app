@@ -9,13 +9,16 @@
 .main-card {
   @include card-background(1);
   position: relative;
+  backdrop-filter: blur(30px);
 }
 
 .closing {
+  position: absolute;
   width: 100%;
   height: 50px;
   background-color: $transparent;
-  bottom: -114px;
+  bottom: 0;
+  top: 690px;
   .closing-text {
     float: left;
     width: 30%;
@@ -66,5 +69,87 @@
     line-height: 50px;
     font-weight: 400;
     background-color: rgba(255, 255, 255, 0.7019607843137254);
+  }
+}
+
+@media (min-width: 320px) and (max-width: $breakpoint-phone) {
+  .main-card {
+    margin: 0 auto;
+    width: auto;
+  }
+  
+  .card-content{
+    padding: 0px 2px 0px 15px;
+  }
+
+  .card-container {
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .shadow .veredict {
+    margin-left: 0px;
+  }
+
+  .shadow .info {
+    margin-left: 0px;
+  }
+
+  .container-fluid {
+    padding: 0 !important;
+  }
+
+  .p0{
+    padding: 0 !important;
+  }
+
+  .row{
+    margin-right:0 !important;
+    margin-left:0 !important;
+  }
+
+  .content-title{
+    margin-left: 38%;
+  }
+}
+
+@media (max-width : 320px) {
+  .main-card {
+    margin: 0 auto;
+    width: 320px;
+  }
+  
+  .card-content{
+    padding: 0px 2px 0px 15px;
+  }
+
+  .card-container {
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .shadow .veredict {
+    margin-left: 0px;
+  }
+
+  .shadow .info {
+    margin-left: 0px;
+  }
+
+  .container-fluid {
+    padding: 0 !important;
+  }
+
+  .p0{
+    padding: 0 !important;
+  }
+
+  .row{
+    margin-right:0 !important;
+    margin-left:0 !important;
+  }
+
+  .content-title{
+    margin-left: 38%;
   }
 }

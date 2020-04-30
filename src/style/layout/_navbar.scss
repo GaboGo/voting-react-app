@@ -10,11 +10,12 @@
     @extend %base-background-text;
     font-weight: 400;
     margin: -20px 0px 0px 150px;
+    text-decoration: none;
   }
 
   .breadcrumbs {
-    margin-top: -10px;
-    margin-left: 15%;
+    margin-top: 5px;
+    text-decoration: none;
     li {
       a {
         color: white !important;
@@ -35,6 +36,46 @@
         width: 100px;
         margin: -15px 30px 0px 0px;
       }
+
+      input[type=search] {
+        width: 130px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        text-overflow: ellipsis;
+        padding-left: 22px;
+      }
+      
+      /* When the input field gets focus, change its width to 100% */
+      input[type=search]:focus {
+        width: 100%;
+        background-color: $base-color-background;
+        color: $base-color-dialog-box-text;
+        height: 20px;
+        background-image: url('/assets/searchicon.png') !important;
+        border-radius: 5px;
+        border-style: none;
+      }
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: $breakpoint-phone) {
+  .navbar {
+    flex-wrap: initial;
+
+    .text-white{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width : 320px) {
+  .navbar {
+    flex-wrap: initial;
+
+    .text-white{
+      margin: 0;
+    }
+  }
+}
+

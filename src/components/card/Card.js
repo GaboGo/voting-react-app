@@ -1,21 +1,57 @@
 import React from "react";
 import TrendProgress from "./TrendProgress";
 import { Row, Col } from "react-bootstrap";
+import {useState} from "react"
+
 const Card = ({
+  id,
   name,
-  content,
-  like,
-  unLike,
-  voteNow,
-  img,
   section,
   time,
+  content,
+  img,
+  voteNow,
   isNegativeVote,
   unLikeProgress,
-  likeProgress,
   totalVotes,
-  main
+  main,
+  likeProgress
 }) => {
+  
+  let [like, setLike] = useState(0)
+  let [voted, setVoted] = useState(false)
+
+  const voting = () => {
+    if(voted){
+      setVoted(false)
+      setLike(0)
+    } else {
+      if(like == 1) {
+        card.votesUp += 1
+      } else if(like == 2) {
+        card.votesDown +=1
+      } else {
+        alert("You haven't selected opinion")
+        return false
+      }
+      card.total += 1
+      voteNow(card)
+      alert("Thanks for voting!")
+      setVoted(true)
+    }
+  }
+
+  let card = {
+    id: id,
+    character: name,
+    section: section,
+    img: img,
+    time: time,
+    description: content,
+    total: totalVotes,
+    votesUp: likeProgress,
+    votesDown: unLikeProgress
+  }
 
   return (
     <>
@@ -59,18 +95,19 @@ const Card = ({
           </Row>
           {!main && 
               <Row className="card-button">
-              <Col className="like-btn" onClick={like}>
+              <Col className={`like-btn ${like == 1 ? "active" : ""} ${voted ? "hidden" : ""}`} onClick={() => {setLike(1)}}>
                 <img src={process.env.PUBLIC_URL + "/assets/thumbsup.png"} />
               </Col>
-              <Col className="down-btn" lg={1} onClick={unLike}>
+              <Col className={`down-btn ${like == 2 ? "active" : ""} ${voted ? "hidden" : ""}`} lg={1} onClick={() => {setLike(2)}}>
                 <img src={process.env.PUBLIC_URL + "/assets/thumbsdown.png"} />
               </Col>
               <Col
                 lg={3}
                 className="vote-button d-flex justify-content-center align-items-center"
-                onClick={voteNow}
+                onClick={voting}
               >
-                <span className="m-0 w-100"> vote now</span>
+                <span className={`m-0 w-100 ${voted ? "hidden" : ""}`}> vote now</span>
+                <span className={`m-0 w-100 ${!voted ? "hidden" : ""}`}> vote again</span>
               </Col>
             </Row>
           }
