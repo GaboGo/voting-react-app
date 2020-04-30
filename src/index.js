@@ -24,7 +24,7 @@ ReactDOM.render(
         <Container className="d-flex justify-content-center align-items-center">
           <Row>
             <Col>
-              <h1>Hello world</h1>
+              <h1>Coming Soon!</h1>
             </Col>
           </Row>
         </Container>
@@ -33,7 +33,7 @@ ReactDOM.render(
         <Container className="d-flex justify-content-center align-items-center">
           <Row>
             <Col>
-              <h1>Hello world</h1>
+              <h1>Coming Soon!</h1>
             </Col>
           </Row>
         </Container>
