@@ -2,6 +2,8 @@
 
 HTML5 semantics and CSS3 features as possible. Cross browser compatibility such as Chrome, Firefox Safari and Edge, latest versions.
 
+![Design image](https://github.com/GaboGo/voting-react-app/blob/master/public/assets/footer.png)
+
 # Requirements:
 
 - [x] Use of media queries to adapt the layout in small screens. (comp not provided, so I use my creativity).
